@@ -1,0 +1,391 @@
+*{
+    margin: 0px;
+    box-sizing: 0px;
+    padding: 0px;
+   
+}
+
+ /* body{
+     line-height: 1.5;
+ } */
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: hsl(var(--dark-grayish-blue));
+}
+
+button{
+    background-color: transparent;
+    border: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+img:hover{
+    cursor: pointer;
+}
+
+.margin{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1fr auto;
+    max-width: 1500px;
+    margin: 20px auto;
+}
+
+.m-width{
+    width: 70%;
+}
+
+.font-sizeP{
+    font-size: 16px;
+    color: hsl(var(--dark-grayish-blue));
+}
+
+.border{
+    border-radius: 7px;
+}
+
+:root{
+     --orange : 26, 100%, 55%;
+     --pale-orange: 25, 100%, 94%;
+
+     --very-vark-blue:220, 13%, 13%;
+     --dark-grayish-blue: 219, 9%, 45%;
+     --light-grayish-blue:223, 64%, 98%;
+     --grayish-blue:220, 14%, 75%;
+     --white:0, 0%, 100%;
+     --black-opacity:0, 0%, 0%;
+}
+
+/* styling the Header */
+
+.mobile-menu{
+    display: none;
+}
+
+header{
+    position: relative;
+    grid-column: 1/3;
+    display: flex;
+    padding: 30px 0px;
+    margin-right: 50px;
+    align-items: center;
+    border-bottom: 1px solid hsl(var(--light-grayish-blue));
+
+}
+
+.logo{
+    margin-right: 30px;
+}
+
+.navList{
+    margin-right: auto;
+}
+
+.navList ul a,.profile ul a{
+    margin: 0px 15px;
+    
+}
+
+
+.navList ul a:hover{
+    border-bottom: 3px solid hsl(var(--orange));
+    cursor: pointer;
+}
+
+.profile ul{
+    display: flex;
+    align-items: center;
+}
+
+.cartMenu{
+    display: none;
+    box-shadow: 0px 11px 24px rgb(68, 68, 68);
+    background-color: hsl(var(--white));
+    border-radius: 7px;
+    z-index: 1;
+    height: 220px;
+    width: 320px;
+    position: absolute;
+    right: -50px;
+    
+}
+.cartMenu h5{
+    padding: 20px;
+    border-bottom: 1px solid hsl(var(--light-grayish-blue));
+}
+
+.cart-content{
+    display: none;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    color: hsl(var(--dark-grayish-blue));
+}
+
+.basket-content{
+    margin: 15px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+}
+
+#cart-info{
+    display: block;
+    color: hsl(var(--dark-grayish-blue));
+   padding: 10px;
+}
+
+#checkout{
+    background-color: hsl(var(--orange));
+    color: hsl(var(--white));
+    width: 280px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+/* Product Area */
+
+.product-area{
+    /* margin: 30px auto;
+    width: 80%; */
+    grid-column: 1/3;
+    display: flex;
+}
+
+.product-margin{
+    margin: 50px;
+}
+
+.more-images{
+    display: flex;
+    gap: 25px;
+    padding: 10px 0px;
+}
+
+#Sneaker-com{
+    color: hsl(var(--orange));
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-top: 50px;
+
+}
+
+#Fall{
+    font-size: 42px;
+    padding-top: 20px;
+}
+
+#These{
+    padding-top: 30px;
+    line-height: 1.5;
+}
+
+#amount{
+    padding-top: 20px;
+    font-size: 24px;
+}
+
+#initial-amount{
+    padding: 5px 0px;
+    color: hsl(var(--dark-grayish-blue));
+}
+
+#discount{
+    color: hsl(var(--orange));
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: hsl(var(--pale-orange));
+}
+
+.cart-buttons{
+    display: flex;
+    padding: 30px 0px;
+}
+
+#increase{
+    display: flex;
+    align-content: center;
+    background-color: hsl(var(--light-grayish-blue));
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: auto;
+}
+
+.spacing{
+    margin: 0px 15px;
+}
+
+#Add-to{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(var(--orange));
+    color: hsl(var(--white));
+    border-radius: 10px;
+    padding: 10px;
+    width: 230px;
+}
+
+#cart-svg{
+    margin-right: 10px;
+  
+}
+
+.mobile{
+    display: none;
+}
+
+/* Responsive mobile version */
+
+
+
+@media only screen and (max-width:375px){
+    .margin{
+        display: none;
+      
+    }
+
+    .mobile{
+        max-width: 347px;
+        margin: 20px auto;
+        display: block;
+        position: relative;
+    }
+
+    .mobile-header
+    {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile-menu{
+        margin-right: auto;
+    }
+
+    .margin-right{
+        margin-right: 15px;
+    }
+     
+    #mobile-menu,#mobile-profile{
+        display: flex;
+        align-items: center;
+    }
+
+    .open-menu{
+        display: none;
+        position: absolute;
+        z-index: 5;
+        height: 100vh;
+    }
+
+    .open-menu-list{
+        display: flex;
+        flex-direction: column;
+    }
+    .open-menu-list a{
+        margin-bottom: 20px;
+    }
+
+    #close-button{
+        text-align: left;
+        margin-bottom: 25px;
+    }
+
+    .Product-image-sliding{
+        background: url("images/image-product-1.jpg " ) no-repeat;
+        background-size: cover;
+        height: 300px;
+        margin: -15px;
+    }
+
+    .Product-image-sliding{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-navigator{
+
+        background-color: hsl(var(--white));
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
+
+    #navigator-margin{
+        margin-right: 260px;
+    }
+
+
+    .product-margin{
+        margin: 20px;
+    }
+
+    #Sneaker-com {
+        color: hsl(var(--orange));
+        text-transform: uppercase;
+        font-size: 16px;
+        padding-top: 50px;
+    }
+
+    #Fall{
+        font-size: 32px;
+    }
+
+    .price{
+        display: flex;
+        align-items: center;
+    }
+
+    #amount{
+        margin-right: auto;
+    }
+
+    #initial-amount{
+        padding-top: 20px;
+    }
+
+    .cart-buttons{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .spacing{
+        margin: 0px 30px;
+    }
+
+    #increase{
+        width: 200px;
+        margin-right: 0px;
+    }
+
+    .cartMenu{
+        top: 86px;
+        right: -7px;
+        width: 360px;
+
+    }
+
+    .basket-content ul{
+        display: flex;
+        align-items: center;
+    }
+}
